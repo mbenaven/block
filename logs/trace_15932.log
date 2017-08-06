@@ -1,0 +1,19 @@
+2017-07-24T18:41:32.239Z INFO    ModelManager             :info()                    
+    namespace org.hyperledger.composer.system
+
+    abstract asset Asset {  }
+
+    abstract participant Participant {   }
+
+    abstract transaction Transaction identified by transactionId{
+      o String transactionId
+      o DateTime timestamp
+    }
+
+    abstract event Event identified by eventId{
+      o String eventId
+      o DateTime timestamp
+    }
+ {}$
+2017-07-24T18:41:32.319Z INFO    ModelManager             :addModelFile()            addModelFile {"0":"/**\r\n * Sample business network definition.\r\n */\r\nnamespace org.acme.sample\r\n\r\nasset SampleAsset identified by assetId {\r\n  o String assetId\r\n  --> SampleParticipant owner\r\n  o String value\r\n}\r\n\r\nparticipant SampleParticipant identified by participantId {\r\n  o String participantId\r\n  o String firstName\r\n  o String lastName\r\n}\r\n\r\ntransaction SampleTransaction {\r\n  --> SampleAsset asset\r\n  o String newValue\r\n}\r\n\r\nevent SampleEvent {\r\n  --> SampleAsset asset\r\n  o String oldValue\r\n  o String newValue\r\n}\r\n"}$
+2017-07-24T18:42:29.776Z INFO    ModelManager             :addModelFile()            addModelFile {"0":"/**\r\n * My commodity trading network\r\n */\r\nnamespace org.acme.mynetwork\r\nasset Commodity identified by tradingSymbol {\r\n    o String tradingSymbol\r\n    o String description\r\n    o String mainExchange\r\n    o Double quantity\r\n    --> Trader owner\r\n}\r\nparticipant Trader identified by tradeId {\r\n    o String tradeId\r\n    o String firstName\r\n    o String lastName\r\n}\r\ntransaction Trade {\r\n    --> Commodity commodity\r\n    --> Trader newOwner\r\n}"}$
