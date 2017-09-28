@@ -2,7 +2,7 @@
 # Copyright London Stock Exchange Group All Rights Reserved.
 #
 # SPDX-License-Identifier: Apache-2.0
-#
+# Adding this comment
 # This script pulls docker images from the Dockerhub hyperledger repositories
 
 # set the default Docker namespace and tag
