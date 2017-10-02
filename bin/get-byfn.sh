@@ -1,9 +1,7 @@
 #!/bin/bash -eu
 #
 # Copyright IBM Corp All Rights Reserved
-#
 # SPDX-License-Identifier: Apache-2.0
-#
 
 # This script downloads the build your first network sample app 
 
